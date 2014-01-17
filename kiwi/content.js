@@ -9,23 +9,23 @@ chrome.storage.sync.get('urls', function(data) {
     	urls = data;
     	flag = false;
     	time = 0;
-    	console.log(urls.urls);
+    	//console.log(urls.urls);
     	urls.urls.forEach(function(term){
-    		console.log(term.value);
+    		//console.log(term.value);
     		if (window.location.href.match(term.value) != null){
     			flag = true;
     			time = term.time;
-    			console.log(term);
-    			console.log(window.location.href);
+    			//console.log(term);
+    			//console.log(window.location.href);
     		}
     	});
-    	console.log(flag);
+    	//console.log(flag);
     	if (flag){
     		createPageLoader(time);
     	}
     }
     else {
-    	console.log("No Data!");
+    	//console.log("No Data!");
     }
 });
 
